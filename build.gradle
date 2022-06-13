@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4' // 2.6.7
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.recruitment'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	implementation "io.springfox:springfox-swagger2:2.9.2"
+	implementation "io.springfox:springfox-swagger-ui:2.9.2"
+
+	implementation "io.springfox:springfox-bean-validators:2.9.2"
+	implementation "org.mapstruct:mapstruct:1.4.1.Final"
+	implementation 'org.springframework.boot:spring-boot-starter-security:2.6.3'
+	annotationProcessor "org.mapstruct:mapstruct-processor:1.4.1.Final"
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'org.hibernate:hibernate-validator:7.0.0.Final'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:2.13.2'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

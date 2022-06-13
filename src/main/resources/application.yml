@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://146.190.230.52:3306/test
+    username: user
+    password: Ad@1234567MIN
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081
+
+value:
+  filePath: D:\recruitment-files
+
